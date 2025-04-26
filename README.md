@@ -25,5 +25,5 @@ Pour run le projet il faut :
 
 4- Ouvrir le dossier du projet puis le terminal VS-Code
 
-5- Run en tant qu'admin : npm run dev-client || Run en tant que client : npm run dev-admin
+5- Run en tant que client : npm run dev-client || Run en tant qu'admin : npm run dev-admin
 
