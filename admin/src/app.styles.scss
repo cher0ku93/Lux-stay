@@ -1,0 +1,139 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body global */
+html, body {
+  height: 100%; // Assure que la hauteur totale est prise en compte
+}
+
+body {
+  font-family: Arial, sans-serif; // Police par défaut
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9; // Fond léger
+  display: flex; 
+  flex-direction: column; // Pour organiser le contenu verticalement
+}
+
+/* App container : Structure principale */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Hauteur totale de la fenêtre
+}
+
+.content {
+  flex: 1; // Prend l'espace restant pour pousser le footer en bas
+  padding: 20px;
+}
+
+/* Liens */
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #0078ff; // Bleu au survol
+  }
+}
+
+/* Conteneur central */
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Titres */
+.heading {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+
+  &.center {
+    text-align: center;
+  }
+}
+
+/* Formulaires */
+.form-wrapper {
+  width: 540px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .input-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #0078ff;
+        box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
+      }
+    }
+
+    textarea {
+      height: 100px;
+      resize: none; // Empêche le redimensionnement
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0078ff; // Bleu au survol
+    }
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 10%;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: #555;
+
+  a {
+    color: #333;
+    margin: 0 10px;
+    font-weight: 500;
+
+    &:hover {
+      color: #0078ff;
+    }
+  }
+}

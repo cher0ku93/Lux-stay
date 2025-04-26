@@ -1,0 +1,64 @@
+/* Footer Styles */
+.footer {
+    background-color: #f4f4f4; /* Gris clair */
+    color: #333; /* Couleur texte foncé */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Section principale */
+  .footer-section h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Liens de navigation */
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #0078ff; /* Bleu au survol */
+  }
+  
+  /* Réseaux sociaux */
+  .footer-social {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-social a:hover {
+    color: #0078ff; /* Bleu au survol */
+  }
+  
