@@ -27,3 +27,9 @@ Pour run le projet il faut :
 
 5- Run en tant que client : npm run dev-client || Run en tant qu'admin : npm run dev-admin
 
+
+Lien OneDrive pour telecharger le dossier complet car trop lourd pour github : 
+
+https://efrei365net-my.sharepoint.com/:f:/g/personal/ilyes_kheroua_efrei_net/ElTAZ5d9FYREvVQaNs1bSvoBz2pjB-XHcxeSL8RQVoHlAg?e=Abk70k
+
+Lien GitHub : https://github.com/cher0ku93/Lux-stay
