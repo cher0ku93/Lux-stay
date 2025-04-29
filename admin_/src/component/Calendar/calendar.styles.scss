@@ -1,0 +1,18 @@
+.calendar-container {
+    margin: 2rem auto;
+    max-width: 400px;
+  
+    .reserved-date {
+      background-color: #ff6347; /* Rouge clair pour les jours réservés */
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-weight: bold;
+    }
+  
+    .react-calendar__tile--now {
+      background-color: #90ee90 !important; /* Vert clair pour aujourd'hui */
+      color: #333;
+    }
+  }
+  

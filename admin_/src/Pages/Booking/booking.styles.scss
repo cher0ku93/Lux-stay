@@ -1,0 +1,249 @@
+#booking {
+  .content-wrapper {
+    width: 540px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Section Date */
+    .date-section {
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+      color: #333;
+
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: #007bff;
+      }
+
+      /* Pop-up Styles */
+.popup-overlay {
+  position: fixed; /* Fixe la pop-up par rapport à l'écran */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  z-index: 1000; /* Assure que la pop-up est au-dessus de tout */
+
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%; /* Adapté aux petits écrans */
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    button {
+      padding: 0.5rem 1.5rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+
+        .arrow {
+          margin: 0 0.5rem;
+          font-size: 1.5rem;
+          color: #007bff;
+        }
+      }
+    }
+
+    /* Section Guests */
+    .guests-section {
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+      color: #333;
+
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: #007bff;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #555;
+      }
+    }
+
+    /* Section Services */
+    .services-wrapper {
+      margin-top: 2rem;
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #007bff;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.1rem;
+          color: #333;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          i {
+            font-size: 1.5rem;
+            color: #007bff;
+          }
+        }
+      }
+    }
+
+    /* Section Détails de la Chambre */
+    .room-details {
+      margin-top: 2rem;
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #007bff;
+      }
+
+      .room-image-container {
+        position: relative;
+        width: 100%;
+        max-width: 300px; /* Taille maximale légèrement augmentée */
+        height: 200px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+          filter: blur(3px);
+          transition: filter 0.5s ease, transform 0.3s ease;
+
+          &:hover {
+            filter: blur(0);
+            transform: scale(1.05);
+          }
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 1rem;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .room-name {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .room-price {
+        font-size: 1.1rem;
+        color: #007bff;
+        font-weight: bold;
+      }
+    }
+
+    /* Boutons d'action */
+    .cta-wrapper {
+      margin-top: 2rem;
+
+      button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+          transform: scale(1.05);
+        }
+
+        &.cancel {
+          background-color: #ffc107;
+          color: #333;
+
+          &:hover {
+            background-color: #e0a800;
+          }
+        }
+
+        &.danger {
+          background-color: red;
+
+          &:hover {
+            background-color: darkred;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+#room {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  min-height: 100vh;
+  margin: 0;
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+
+    .content {
+      display: flex;
+      flex-direction: row; /* Alignement en ligne */
+      gap: 5rem; /* Espacement horizontal entre carousel et texte */
+      align-items: center; /* Centre verticalement les deux colonnes */
+      margin-top: 2rem;
+
+      .wrap {
+        flex: 0 0 800px; /* Taille fixe pour le carousel */
+        height: 500px; /* Hauteur fixe */
+        display: flex;
+        align-items: center; /* Centre le contenu verticalement */
+
+        .carousel-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text-wrapper {
+        flex: 1; /* Le texte prend le reste de l'espace */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre verticalement */
+        gap: 1.5rem;
+        
+
+        h1 {
+          font-size: 2.2rem;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1rem; /* Taille réduite */
+          line-height: 1.6; /* Espacement entre les lignes */
+          text-align: justify;
+          max-height: 400px; /* Hauteur maximale de la description */
+          overflow-y: auto; /* Active le scroll vertical si le texte dépasse */
+          padding-right: 0.5rem; /* Ajout d'un léger padding pour éviter que le texte touche le bord */
+          scrollbar-width: thin; /* Personnalisation de la barre de scroll pour Firefox */
+          scrollbar-color: #888 #f1f1f1; /* Couleurs pour Firefox */
+        
+          /* Personnalisation de la barre de scroll pour Webkit (Chrome, Safari, Edge) */
+          &::-webkit-scrollbar {
+            width: 8px; /* Largeur de la barre */
+          }
+        
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Couleur de fond */
+          }
+        
+          &::-webkit-scrollbar-thumb {
+            background: #888; /* Couleur de la barre */
+            border-radius: 5px; /* Bord arrondi */
+          }
+        
+          &::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Couleur lors du survol */
+          }
+        }
+        
+
+        h2 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-top: 1rem;
+          color: #333;
+        }
+
+        /* Ajout des spécificités */
+        .features {
+          display: flex;
+          flex-wrap: wrap; /* Permet aux éléments de passer sur plusieurs lignes */
+          gap: 1.5rem; /* Espacement entre les icônes */
+          margin-top: 1.5rem;
+
+          .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem; /* Espace entre l'icône et le texte */
+            font-size: 1rem;
+            color: #555;
+
+            i {
+              font-size: 1.5rem;
+              color: #393fa0; /* Couleur pour les icônes */
+            }
+
+            span {
+              font-size: 1rem;
+              color: #333;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .cta-wrapper {
+          margin-top: 1.5rem;
+          display: flex;
+          gap: 1rem; /* Ajoute un espace entre les boutons */
+        
+          a,
+          button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: black;
+            color: white;
+            border: 2px solid transparent; /* Bordure uniforme */
+            border-radius: 5px; /* Bordures arrondies cohérentes */
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        
+            &:hover {
+              background-color: #333;
+              transform: scale(1.05);
+            }
+          }
+        
+          a {
+            text-decoration: none; /* Enlève le soulignement pour les liens */
+            background-color: #007bff;
+            border-color: #007bff;
+        
+            &:hover {
+              background-color: #0056b3;
+              border-color: #0056b3;
+            }
+          }
+        
+          button {
+            background-color: red;
+            border-color: red;
+        
+            &:hover {
+              background-color: darkred;
+              border-color: darkred;
+            }
+          }
+        }
+        
+        
+      }
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .content {
+      gap: 3rem; /* Réduit l'espace entre les colonnes */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      gap: 2rem;
+
+      .wrap {
+        height: 400px;
+        width: 100%;
+      }
+
+      .text-wrapper {
+        align-items: center;
+        text-align: center;
+
+        .features {
+          justify-content: center; /* Centre les icônes */
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      gap: 1.5rem;
+
+      .wrap {
+        height: 200px;
+        width: 100%;
+      }
+
+      .text-wrapper {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        .features {
+          gap: 1rem; /* Réduit l'espacement pour les petits écrans */
+        }
+      }
+    }
+  }
+}

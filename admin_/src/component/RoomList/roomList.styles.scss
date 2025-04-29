@@ -1,0 +1,57 @@
+#room-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.room-unit {
+  text-align: center;
+}
+
+.room-unit p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.img-wrapper {
+  height: 300px;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Empêche le débordement de l'image lors du zoom */
+  border-radius: 8px; /* Coins arrondis pour un look moderne */
+  position: relative;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transition fluide */
+}
+
+/* Effet de zoom et assombrissement au survol */
+.img-wrapper:hover img {
+  transform: scale(1.1); /* Zoom léger */
+  filter: brightness(0.7); /* Assombrit l'image */
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  #room-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .img-wrapper {
+    height: 200px;
+  }
+}
+
+@media (max-width: 540px) {
+  #room-list {
+    display: block;
+  }
+
+  .room-unit {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}

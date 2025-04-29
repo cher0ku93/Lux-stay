@@ -1,0 +1,138 @@
+###
+GET http://localhost:5000/api/rooms
+
+
+# create room
+###
+POST http://localhost:5000/api/rooms
+Content-Type: application/json
+
+{
+        "name": "room4",
+        "price": 500,
+        "desc": "some description",
+        "roomNumbers":[{
+            "number": 92929,
+            "unavailableDates": ["2024-01-24", "2024-01-26"]
+        }]
+}
+
+# get single room
+###
+GET http://localhost:5000/api/rooms/6760d7509fa835c99471e585
+
+# update room
+###
+PUT http://localhost:5000/api/rooms/675dfae0f4fd5e9ba9ff0101
+Content-Type: application/json
+
+{
+    "name": "updated name efrei",
+    "price": 10000
+}
+
+#delete room
+###
+DELETE http://localhost:5000/api/rooms/675f354ba69b4619783660f4
+
+
+# get bookings
+###
+GET http://localhost:5000/api/bookings
+
+# get single booking
+###
+GET http://localhost:5000/api/bookings/6760d7839fa835c99471e594
+
+
+#create booking
+###
+POST http://localhost:5000/api/bookings
+Content-Type: application/json
+
+{
+    "roomId": "6760d7509fa835c99471e585",
+    "name": "booking backend",
+    "email": "back@end.fr",
+    "checkInDate": "2025-010-28",
+    "checkOutDate": "2025-010-29"
+}
+
+#update booking
+###
+PUT http://localhost:5000/api/bookings/65d640bc295e673321f3883b
+Content-Type: application/json
+
+{
+    "name": "updated name",
+    "email": "updated@gmail.com"
+}
+###
+PUT http://localhost:5000/api/bookings/6760d7839fa835c99471e594
+Content-Type: application/json
+
+{
+  "confirmed": true
+}
+
+
+
+#delete 
+###
+DELETE http://localhost:5000/api/bookings/65d6414ad7204a2ccfffeed7
+
+
+#get users
+###
+GET http://localhost:5000/api/users
+
+#create user
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Ilyès K",
+    "email": "ilyessssss@gmail.com",
+    "password": "oeoe12",
+    "role":"admin"
+}
+
+
+#login user
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "ilyessssss@gmail.com",
+    "password": "oeoe12"
+}
+
+#logout user
+###
+http://localhost:5000/api/users/logout
+
+#check auth
+###
+GET http://localhost:5000/auth
+
+
+### Upload Image to Cloudinary
+POST https://api.cloudinary.com/v1_1/{{xx54wokj}}/image/upload
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="example.jpg"
+Content-Type: image/jpeg
+
+<"./admin/src/images/Untitled-design-1-1.webp"
+--boundary
+Content-Disposition: form-data; name="upload_preset"
+
+{{lux_n_stay}}
+--boundary--
+
+###
+GET http://localhost:5000/api/revenue/total-revenue
+Authorization: Bearer <ton_token_jwt>
